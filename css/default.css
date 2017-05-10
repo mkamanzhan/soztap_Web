@@ -1,0 +1,31 @@
+html, body, h1, h2, h3, h4, h5, h6, ul, li, a, img, p {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Lato", "Helvetica", "Arial", sans-serif;
+
+    background: #dbabc4;
+    background: linear-gradient(45deg, #dbabc4 0%,#ba739b 100%);
+    background: -moz-linear-gradient(45deg, #dbabc4 0%, #ba739b 100%);
+    background: -webkit-linear-gradient(45deg, #dbabc4 0%,#ba739b 100%);
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+}
+
+body {
+    -webkit-user-select: none;
+}

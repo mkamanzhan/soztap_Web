@@ -1,0 +1,122 @@
+.container {
+  padding: 20px;
+  height: 100%;
+}
+.container .top {
+  height: 17px;
+}
+.container .top .nav {
+  color: #fff;
+  font-size: 14px;
+}
+.container .top .nav .left,
+.container .top .nav .center {
+  float: left;
+}
+.container .top .nav .right {
+  float: right;
+}
+.container .top .nav .left,
+.container .top .nav .right {
+  width: 20%;
+}
+.container .top .nav .center {
+  width: 60%;
+  text-align: center;
+}
+.container .top .nav .right {
+  text-align: right;
+}
+.container .top .nav .left:after,
+.container .top .nav .center:after,
+.container .top .nav .right:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+.container .top .nav:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+.container .middle {
+  height: 30%;
+  padding: 40px 0;
+}
+.container .middle .word {
+  line-height: 100px;
+  text-align: center;
+}
+.container .middle .word .items {
+  float: left;
+  width: calc(100% - 18px);
+}
+.container .middle .word .items .list li {
+  color: #fff;
+  margin: 0 5px;
+  font-size: 36px;
+  display: inline-block;
+  text-decoration: underline;
+}
+.container .middle .word .clear {
+  float: left;
+  width: 18px;
+  margin: 41px 0;
+}
+.container .middle .word .clear a i {
+  width: 18px;
+  height: 18px;
+  display: block;
+  background-size: 18px 18px;
+  background-image: url("../images/icon.png");
+}
+.container .middle .word:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+.container .bottom {
+  height: 60%;
+}
+.container .bottom .matrix {
+  width: 320px;
+  margin: 0 auto;
+}
+.container .bottom .matrix .items .row {
+  font-size: 0;
+  margin-bottom: 10px;
+}
+.container .bottom .matrix .items .row .cell {
+  float: left;
+  width: 56px;
+  height: 56px;
+  text-align: center;
+  margin-right: 10px;
+  border-radius: 50%;
+  line-height: 56px;
+  border: 1px solid #fff;
+}
+.container .bottom .matrix .items .row .cell span {
+  color: #fff;
+  font-size: 16px;
+}
+.container .bottom .matrix .items .row .cell:nth-child(5n) {
+  margin-right: 0;
+}
+.container .bottom .matrix .items .row:last-child {
+  margin-bottom: 0;
+}
+.container .bottom .matrix .items .row:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.selected{
+  background-color: rgba(255,255,255,0.4);
+}
+
+
+.resolved{
+  background-color: #0bc;
+}
