@@ -51,7 +51,7 @@ function changeSelectedLetter(selector) {
 function showWord() {
     html = '';
     for(var i=0; i<selected_word.length; i++){
-        html += '<li>' + selected_word[i] + '</li>';
+        html += '<li>' + selected_word[i].toUpperCase() + '</li>';
     }
     $('.word>.items>.list').html(html);
 }
@@ -115,16 +115,25 @@ function getWords(json) {
     words_len = words.length;
 }
 
+
 function refreshScore() {
     $('.score>span').html(words_resolved + '/' + words_len);
+    if(words_resolved == 1){
+        showResult();
+    }
 }
-
 
 
 function refreshTime() {
     seconds += 1;
     $('.timer>span').html(seconds + ' сек');
 }
+
+
+function showResult() {
+    location.href = "file:///home/john/Desktop/temp/result.html";
+}
+
 
 $.getJSON(
     'http://62.109.10.175:8000/get_matrix/?h=5&w=5',
