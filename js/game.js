@@ -134,11 +134,14 @@ function refreshTime() {
 
 
 function showResult() {
-    // for(var keys in translates){
-    //
-    // }
-    params = 'words=' + JSON.stringify(translations) + '&time=' + seconds;
-    location.href = "file:///home/john/Desktop/temp/result.html?" + params;
+    params = 'time=' + seconds; //'&words=' + JSON.stringify(translations);
+    var i = 0;
+    for(var key in translations){
+        params += '&word' + i + '=' + key;
+        params += '&trans' + i + '=' + translations[key];
+        i++;
+    }
+    location.href = "file:///home/john/WebstormProjects/soztapv2/result.html?" + params;
 }
 
 
@@ -150,6 +153,6 @@ $.getJSON(
         getWords(json);
         refreshScore();
         initGame();
-        console.log(json);
+        console.log(words);
     }
 );
