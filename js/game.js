@@ -2,6 +2,8 @@
  * Created by john on 5/10/17.
  */
 
+var translations = {};
+
 var seconds = 0;
 
 var select_state = false;
@@ -113,6 +115,7 @@ function getWords(json) {
     }
 
     words_len = words.length;
+    translations = json.translations;
 }
 
 
@@ -131,7 +134,11 @@ function refreshTime() {
 
 
 function showResult() {
-    location.href = "file:///home/john/Desktop/temp/result.html";
+    // for(var keys in translates){
+    //
+    // }
+    params = 'words=' + JSON.stringify(translations) + '&time=' + seconds;
+    location.href = "file:///home/john/Desktop/temp/result.html?" + params;
 }
 
 
@@ -143,6 +150,6 @@ $.getJSON(
         getWords(json);
         refreshScore();
         initGame();
-        console.log(words);
+        console.log(json);
     }
 );
