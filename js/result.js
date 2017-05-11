@@ -10,7 +10,7 @@ html = '';
 for(var i=0; i<10; i++){
     if(getURLParameter('word' + i) == null) break;
     html += '<li>' + getURLParameter('word' + i) + '</li>';
-    // console.log(getURLParameter('trans' + i));
+    html += getURLParameter('trans' + i);
 }
 $('div.list>ul.list').html(html);
 

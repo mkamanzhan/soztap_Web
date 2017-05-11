@@ -121,7 +121,7 @@ function getWords(json) {
 
 function refreshScore() {
     $('.score>span').html(words_resolved + '/' + words_len);
-    if(words_resolved == words_len){
+    if(words_resolved == words_resolved){
         showResult();
     }
 }
@@ -141,7 +141,7 @@ function showResult() {
         params += '&trans' + i + '=' + translations[key];
         i++;
     }
-    location.href = "result.html?" + params;
+    location.href = "result/?" + params;
 }
 
 
