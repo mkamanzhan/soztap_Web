@@ -121,7 +121,7 @@ function getWords(json) {
 
 function refreshScore() {
     $('.score>span').html(words_resolved + '/' + words_len);
-    if(words_resolved == 1){
+    if(words_resolved == words_len){
         showResult();
     }
 }
@@ -141,10 +141,11 @@ function showResult() {
         params += '&trans' + i + '=' + translations[key];
         i++;
     }
-    location.href = "file:///home/john/WebstormProjects/soztapv2/result.html?" + params;
+    location.href = "result.html?" + params;
 }
 
 
+$(".loading").show();
 $.getJSON(
     'http://62.109.10.175:8000/get_matrix/?h=5&w=5',
     function (json) {
@@ -154,5 +155,7 @@ $.getJSON(
         refreshScore();
         initGame();
         console.log(words);
+
+        $(".loading").hide();
     }
 );

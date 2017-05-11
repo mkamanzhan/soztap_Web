@@ -95,6 +95,7 @@
   border-radius: 50%;
   line-height: 56px;
   border: 1px solid #fff;
+  text-transform: uppercase;
 }
 .container .bottom .matrix .items .row .cell span {
   color: #fff;
@@ -118,7 +119,7 @@
 
 
 .resolved{
-  background-color: #0bc;
+  background-color: #83b4c3;
 }
 
 .container .result {
